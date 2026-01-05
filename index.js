@@ -74,25 +74,44 @@ const container = document.getElementById('canvas-container');
             mouseY = -(e.clientY / window.innerHeight) * 2 + 1;
         });
 
-        // Changement de couleur au scroll
-        window.addEventListener('scroll', () => {
-            const scrollPercent = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
-            
-            // Interpoler entre différentes couleurs
-            const hue = scrollPercent * 360; // De 0 à 360 degrés
-            const color = new THREE.Color(`hsl(${hue}, 70%, 60%)`);
-            
-            // Appliquer la couleur au matériau des cubes
-            material.color = color;
-            
-            // Changer aussi la couleur des sphères
-            sphereMaterial.color = color;
-            sphereMaterial.emissive = color;
-        });
+        // Changement de couleur automatique avec transition fluide
+        let currentHue = 0;
+        let targetHue = 60;
+        let lastColorChange = Date.now();
 
         // Animation
         function animate() {
             requestAnimationFrame(animate);
+
+            // Transition fluide de couleur
+            const now = Date.now();
+            const timeSinceChange = now - lastColorChange;
+            const transitionDuration = 2000; // 2 secondes pour la transition
+            
+            if (timeSinceChange >= transitionDuration) {
+                lastColorChange = now;
+                currentHue = targetHue;
+                targetHue = (targetHue + 60) % 360; // Prochaine couleur
+            }
+            
+            // Interpolation douce entre currentHue et targetHue
+            const progress = Math.min(timeSinceChange / transitionDuration, 1);
+            const easedProgress = progress * progress * (3 - 2 * progress); // Easing smooth
+            let interpolatedHue = currentHue + (targetHue - currentHue) * easedProgress;
+            
+            // Gérer le passage de 360 à 0
+            if (Math.abs(targetHue - currentHue) > 180) {
+                if (targetHue > currentHue) {
+                    interpolatedHue = currentHue + ((targetHue - 360) - currentHue) * easedProgress;
+                } else {
+                    interpolatedHue = currentHue + ((targetHue + 360) - currentHue) * easedProgress;
+                }
+            }
+            
+            const color = new THREE.Color(`hsl(${interpolatedHue % 360}, 70%, 60%)`);
+            material.color = color;
+            sphereMaterial.color = color;
+            sphereMaterial.emissive = color;
 
             // Rotation automatique
             group.rotation.x += 0.005;
