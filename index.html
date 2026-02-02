@@ -16,16 +16,20 @@
             <div class="logo">A<span>A</span></div>
             <ul class="nav-menu">
                 <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#apropos">Mon Parcours</a></li>
                 <li><a href="#competences">Compétences</a></li>
                 <li><a href="#projets">Projets</a></li>
-                <li><a href="#contact" class="nav-cta">Contact</a></li>
+                <li><a href="assets/images/Alexandre.pdf" download="Alexandre.pdf" class="btn btn-secondary nav-cta">Mon CV</a></li> 
             </ul>
-        </div>
+        </div> 
     </nav>
+    <section class="CreationEnCours">
+       <div class="creation">En cours de développement</div>
+    </section>
 
     <!-- Hero Section avec Cube 3D -->
     <section id="accueil" class="hero-section">
+        
         <div id="canvas-container"></div>
         <div class="info-panel">
             <div class="badge">Développeur Web Full-Stack</div>
@@ -33,7 +37,7 @@
             <p class="subtitle">Reconversion réussie à 30 ans dans le développement web. Je transforme des idées innovantes en applications web performantes et esthétiques.</p>
             <div class="cta-buttons">
                 <a href="#projets" class="btn btn-primary">Voir mes projets</a>
-                <a href="#contact" class="btn btn-secondary">Me contacter</a>
+                <a href="assets/images/Alexandre.pdf" download="Alexandre.pdf" class="btn btn-secondary">Télécharger mon CV</a>
             </div>
             <div class="social-links">
                 <a href="https://github.com/Alex05510" target="_blank" class="social-btn" aria-label="GitHub">
@@ -83,7 +87,7 @@
                         <span class="skill-tag">Node.js</span>
                         <span class="skill-tag">Express</span>
                         <span class="skill-tag">API REST</span>
-                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">MySQL</span>
                     </div>
                 </div>
                 <div class="skill-category">
@@ -116,13 +120,13 @@
                     <p>Portfolio moderne avec animations 3D et effets interactifs utilisant Three.js.</p>
                     <a href="https://github.com/Alex05510/pathe" target="_blank" class="project-link">Voir sur Git →</a>
                 </div> 
-                <div class="project-card">
+                <div class="project-card bolonews">
                     <div class="project-icon">💻</div>
                     <h3>Bolonews</h3>
                     <p></p>
                     <a href="https://github.com/Alex05510/Bolonews" target="_blank" class="project-link">Voir sur Git →</a>
                 </div>
-                <div class="project-card">
+                <div class="project-card cutiepanda">
                     <div class="project-icon">🐼</div>
                     <h3>Cutie Panda</h3>
                     <p>Cutie Panda est un jeu interactif développé en React et Vite.js où vous devez prendre soin d’un panda virtuel : le nourrir, le faire dormir, travailler et jouer, tout en gérant ses stats et en évitant les embûches.</p>
@@ -131,6 +135,57 @@
             </div>
         </div>
     </section>
+
+    <!-- Modale À propos -->
+    <div id="modal-apropos" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Fermer">&times;</button>
+            <div class="modal-header">
+                <h2>Mon <span class="highlight">Parcours</span></h2>
+            </div>
+            <div class="modal-body">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-icon">💼</div>
+                        <div class="timeline-content">
+                            <h3>Reconversion Professionnelle</h3>
+                            <span class="timeline-date">2023</span>
+                            <p>Suite à un accident du travail, exerçant un métier qui ne me passionnait pas, 
+                                j’ai décidé d’entamer des démarches de reconversion professionnelle. Plusieurs rendez-vous 
+                                ont eu lieu au CIBC de Gap afin de monter un dossier et de trouver une entreprise pour un futur stage de fin de formation.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">🎓</div>
+                        <div class="timeline-content">
+                            <h3>Formation Développeur Web</h3>
+                            <span class="timeline-date">2025</span>
+                            <p>Une fois mon dossier validé et mon stage trouvé, j’ai commencé une formation intensive de 9 mois en développement web full-stack au sein de l’école WebEcom. 
+                                J’y ai acquis la maîtrise de HTML5, CSS3, JavaScript, React, Node.js ainsi que des bases de données MySQL.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-icon">🚀</div>
+                        <div class="timeline-content">
+                            <h3>Projets & Réalisations</h3>
+                            <span class="timeline-date">2025 ( En cours de formation )</span>
+                            <p>Développement de plusieurs projets concrets exploitant les technologies web modernes, incluant des applications dynamiques en React, 
+                                des animations 3D interactives avec Three.js, ainsi que l’intégration et la consommation d’APIs REST.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">🎯</div>
+                        <div class="timeline-content">
+                            <h3>Objectifs Futurs</h3>
+                            <span class="timeline-date">2026 et au-delà</span>
+                            <p>Continuer à développer mes compétences, Trouver un emploi et contribuer à des projets innovants et créer des applications web qui font la différence.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="index.js"></script>

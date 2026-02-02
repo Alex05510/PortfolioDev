@@ -146,3 +146,41 @@ const container = document.getElementById('canvas-container');
             camera.updateProjectionMatrix();
             renderer.setSize(window.innerWidth, window.innerHeight);
         });
+
+// Gestion de la modale À propos
+const modal = document.getElementById('modal-apropos');
+const btnApropos = document.querySelector('a[href="#apropos"]');
+const btnClose = document.querySelector('.modal-close');
+
+// Ouvrir la modale
+if (btnApropos) {
+    btnApropos.addEventListener('click', (e) => {
+        e.preventDefault();
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+}
+
+// Fermer la modale avec le bouton de fermeture
+if (btnClose) {
+    btnClose.addEventListener('click', () => {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    });
+}
+
+// Fermer la modale en cliquant à l'extérieur
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+});
+
+// Fermer la modale avec la touche Échap
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+});

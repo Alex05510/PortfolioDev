@@ -133,6 +133,9 @@ body::after {
     display: none;
 }
 
+.creation {
+    background-color: red;
+}
 /* Hero Section */
 .hero-section {
     min-height: 100vh;
@@ -419,6 +422,7 @@ canvas {
     position: relative;
 }
 
+
 .project-card::before {
     content: '';
     position: absolute;
@@ -438,6 +442,38 @@ canvas {
     transform: translateY(-10px);
     border-color: #7828c8;
     box-shadow: 0 20px 60px rgba(120, 40, 200, 0.3);
+}
+
+/* Style spécifique pour la carte Pathé avec image de fond */
+.project-card.pathe {
+    background: linear-gradient(rgba(10, 10, 15, 0.85), rgba(10, 10, 15, 0.95)), 
+                url('assets/images/Pathe.png');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.project-card.pathe:hover {
+    background: linear-gradient(rgba(10, 10, 15, 0.75), rgba(10, 10, 15, 0.9)), 
+                url('assets/images/Pathe.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.project-card.bolonews {
+    background: linear-gradient(rgba(10, 10, 15, 0.85), rgba(10, 10, 15, 0.95)), 
+                url('assets/images/*.png');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.project-card.cutiepanda {
+    background: linear-gradient(rgba(10, 10, 15, 0.85), rgba(10, 10, 15, 0.95)), 
+                url('assets/images/*.png');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
 }
 
 .project-image {
@@ -668,4 +704,233 @@ canvas {
     .subtitle {
         font-size: 1rem;
     }
+}
+
+/* Modale À propos */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 15, 0.95);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    position: relative;
+    background: rgba(20, 20, 30, 0.95);
+    border: 1px solid rgba(120, 40, 200, 0.3);
+    border-radius: 20px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 3rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
+                0 0 40px rgba(120, 40, 200, 0.2);
+    animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: rgba(120, 40, 200, 0.2);
+    border: 1px solid rgba(120, 40, 200, 0.4);
+    color: #fff;
+    font-size: 2rem;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    background: rgba(120, 40, 200, 0.4);
+    transform: rotate(90deg);
+    box-shadow: 0 0 20px rgba(120, 40, 200, 0.5);
+}
+
+.modal-header {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(120, 40, 200, 0.2);
+}
+
+.modal-header h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.modal-body {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding-left: 3rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, 
+        rgba(120, 40, 200, 0.5) 0%, 
+        rgba(0, 240, 255, 0.5) 100%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-left: 1.5rem;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-icon {
+    position: absolute;
+    left: -3rem;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    background: rgba(120, 40, 200, 0.2);
+    border: 2px solid #7828c8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 0 20px rgba(120, 40, 200, 0.4);
+    z-index: 1;
+}
+
+.timeline-content h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.timeline-date {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    background: rgba(120, 40, 200, 0.15);
+    border: 1px solid rgba(120, 40, 200, 0.3);
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #00f0ff;
+    margin-bottom: 0.8rem;
+}
+
+.timeline-content p {
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.75);
+    margin-top: 0.8rem;
+}
+
+/* Scrollbar pour la modale */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: rgba(10, 10, 15, 0.5);
+    border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: rgba(120, 40, 200, 0.5);
+    border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(120, 40, 200, 0.7);
+}
+
+/* Responsive modale */
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 2rem 1.5rem;
+        width: 95%;
+        max-height: 90vh;
+    }
+    
+    .modal-header h2 {
+        font-size: 2rem;
+    }
+    
+    .timeline {
+        padding-left: 2.5rem;
+    }
+    
+    .timeline-icon {
+        left: -2.5rem;
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Section En cours de création */
+.CreationEnCours {
+    padding-top: 80px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.creation {
+    font-size: 1.5rem;
+    color: #ffff;
+    font-weight: 600;
 }
