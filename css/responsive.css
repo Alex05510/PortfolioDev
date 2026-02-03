@@ -104,6 +104,43 @@
     .timeline-content h3 {
         font-size: 1.2rem;
     }
+
+    /* Page Apropos responsive */
+    .AproposBio {
+        width: 90%;
+        margin-left: 5%;
+        padding: 1.5rem;
+    }
+
+    .AproposDeMoi {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .AproposDeMoi .left-align,
+    .AproposDeMoi .right-align {
+        width: 100%;
+    }
+
+    .AproposBio img {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .AproposBio h3 {
+        font-size: 1.5rem;
+    }
+
+    .AproposBio p {
+        font-size: 1rem;
+    }
+
+    .creation {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+    }
 }
 
 /* Petits mobiles */
@@ -119,5 +156,29 @@
 
     .subtitle {
         font-size: 1rem;
+    }
+
+    /* Page Apropos petits écrans */
+    .AproposBio {
+        width: 95%;
+        margin-left: 2.5%;
+        padding: 1rem;
+    }
+
+    .AproposBio img {
+        max-width: 250px;
+    }
+
+    .AproposBio h3 {
+        font-size: 1.3rem;
+    }
+
+    .AproposBio p {
+        font-size: 0.9rem;
+    }
+
+    .creation {
+        font-size: 1rem;
+        padding: 0.4rem;
     }
 }
