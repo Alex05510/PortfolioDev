@@ -1006,4 +1006,6 @@ canvas {
     font-size: 1.5rem;
     color: #ffff;
     font-weight: 600;
+    position: fixed;
+    width: 100%;
 }

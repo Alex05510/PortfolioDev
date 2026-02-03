@@ -1,0 +1,297 @@
+/* Sections principales */
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#canvas-container {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    margin-left: 15%;
+}
+
+canvas {
+    display: block;
+}
+
+.info-panel {
+    position: relative;
+    z-index: 10;
+    max-width: 700px;
+    margin-left: 5%;
+    padding: 2rem;
+}
+
+.info-panel h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    letter-spacing: -2px;
+    color: var(--text-primary);
+}
+
+.subtitle {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Skills Section */
+.skills-section {
+    padding: var(--section-padding);
+    background: var(--bg-dark);
+    position: relative;
+    z-index: 2;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.skill-category h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-secondary);
+    font-weight: 600;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+/* Projects Section */
+.projects-section {
+    min-height: 100vh;
+    padding: var(--section-padding);
+    background: var(--bg-dark);
+    position: relative;
+    z-index: 2;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+}
+
+/* Cartes de projet avec images de fond */
+.project-card.pathe {
+    background: linear-gradient(rgba(10, 10, 15, 0.85), rgba(10, 10, 15, 0.95)), 
+                url('../assets/images/Pathe.png');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.project-card.pathe:hover {
+    background: linear-gradient(rgba(10, 10, 15, 0.75), rgba(10, 10, 15, 0.9)), 
+                url('../assets/images/Pathe.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.project-card.bolonews {
+    background: linear-gradient(rgba(10, 10, 15, 0.85), rgba(10, 10, 15, 0.95)), 
+                url('../assets/images/*.png');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.project-card.cutiepanda {
+    background: linear-gradient(rgba(10, 10, 15, 0.85), rgba(10, 10, 15, 0.95)), 
+                url('../assets/images/*.png');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.project-image {
+    height: 200px;
+    background: linear-gradient(135deg, var(--primary-overlay-light), rgba(0, 240, 255, 0.1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-icon {
+    font-size: 5rem;
+    z-index: 1;
+}
+
+.project-content {
+    padding: 2rem;
+}
+
+.project-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.project-content p {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: var(--section-padding);
+    background: var(--bg-dark);
+    position: relative;
+    z-index: 2;
+}
+
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.contact-item {
+    text-align: center;
+}
+
+.contact-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-item h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-secondary);
+}
+
+.contact-item p,
+.contact-item a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-item a:hover {
+    color: var(--text-primary);
+}
+
+/* Footer */
+.footer {
+    padding: 3rem 0;
+    background: rgba(10, 10, 15, 0.8);
+    border-top: 1px solid var(--border-primary);
+    position: relative;
+    z-index: 2;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--color-secondary);
+}
+
+/* Section En cours de création */
+.CreationEnCours {
+    padding-top: 80px;
+    text-align: center;
+    position: relative;
+    z-index: 500;
+}
+
+.creation {
+    font-size: 1.5rem;
+    color: #ffff;
+    font-weight: 600;
+    position: fixed;
+    width: 100%;
+    background-color: red;
+}
+
+.AproposDeMoi {
+    display: flex;
+    align-items: center;
+}
+.AproposBio {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 4%;
+     background: var(--overlay-light);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--border-radius-lg);
+    padding: 2rem;
+    transition: var(--transition-fast);
+}
+.AproposBio img {
+    width: 500px;
+    border-radius: var(--border-radius-full);
+    border: 3px solid var(--color-primary);
+    box-shadow: 0 0 20px rgba(120, 40, 200, 0.4);
+}

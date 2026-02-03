@@ -71,7 +71,7 @@ const container = document.getElementById('canvas-container');
 
         document.addEventListener('mousemove', (e) => {
             mouseX = (e.clientX / window.innerWidth) * 2 - 1;
-            mouseY = -(e.clientY / window.innerHeight) * 2 + 1;
+            mouseY = (e.clientY / window.innerHeight) * 2 - 1;
         });
 
         // Changement de couleur automatique avec transition fluide
@@ -118,8 +118,8 @@ const container = document.getElementById('canvas-container');
             group.rotation.y += 0.005;
 
             // Suivre la souris avec un effet de lissage
-            targetX = mouseX * 0.3;
-            targetY = mouseY * 0.3;
+            targetX = mouseX * 0.5;
+            targetY = mouseY * 0.5;
             
             group.rotation.y += (targetX - group.rotation.y) * 0.05;
             group.rotation.x += (targetY - group.rotation.x) * 0.05;

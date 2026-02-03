@@ -1,0 +1,58 @@
+/* Variables CSS */
+:root {
+    /* Couleurs principales */
+    --color-primary: #7828c8;
+    --color-secondary: #00f0ff;
+    --color-accent: #9d4edd;
+    --color-pink: #ff0096;
+    
+    /* Couleurs de fond */
+    --bg-dark: #0a0a0f;
+    --bg-dark-secondary: rgba(20, 20, 30, 0.95);
+    
+    /* Couleurs de texte */
+    --text-primary: #fff;
+    --text-secondary: rgba(255, 255, 255, 0.75);
+    --text-muted: rgba(255, 255, 255, 0.6);
+    
+    /* Opacités */
+    --overlay-light: rgba(255, 255, 255, 0.02);
+    --overlay-medium: rgba(255, 255, 255, 0.05);
+    --primary-overlay-light: rgba(120, 40, 200, 0.1);
+    --primary-overlay-medium: rgba(120, 40, 200, 0.15);
+    --primary-overlay-dark: rgba(120, 40, 200, 0.2);
+    
+    /* Bordures */
+    --border-primary: rgba(120, 40, 200, 0.2);
+    --border-primary-hover: rgba(120, 40, 200, 0.4);
+    --border-light: rgba(255, 255, 255, 0.1);
+    --border-medium: rgba(255, 255, 255, 0.2);
+    
+    /* Ombres */
+    --shadow-primary: 0 10px 30px rgba(120, 40, 200, 0.4);
+    --shadow-primary-hover: 0 15px 40px rgba(120, 40, 200, 0.6);
+    --shadow-card: 0 20px 60px rgba(120, 40, 200, 0.3);
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #7828c8, #9d4edd);
+    --gradient-text: linear-gradient(135deg, #7828c8, #00f0ff);
+    --gradient-text-white: linear-gradient(135deg, #fff, #00f0ff);
+    --gradient-timeline: linear-gradient(180deg, rgba(120, 40, 200, 0.5) 0%, rgba(0, 240, 255, 0.5) 100%);
+    
+    /* Tailles */
+    --max-width: 1400px;
+    --border-radius-sm: 12px;
+    --border-radius-md: 15px;
+    --border-radius-lg: 20px;
+    --border-radius-xl: 25px;
+    --border-radius-full: 50%;
+    
+    /* Transitions */
+    --transition-fast: all 0.3s ease;
+    --transition-medium: all 0.4s ease;
+    --transition-slow: all 0.6s ease;
+    
+    /* Espacements */
+    --section-padding: 100px 0;
+    --container-padding: 0 2rem;
+}
